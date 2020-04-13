@@ -2,11 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
-import { Button } from '../packages';
+import Melody from '../lib/index.umd.min.js';
 
-console.log(Button);
-
-Vue.use(Button);
+Vue.use(Melody);
 
 Vue.config.productionTip = false;
 

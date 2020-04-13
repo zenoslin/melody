@@ -4,7 +4,7 @@ module.exports = {
         [
             'import',
             {
-                libraryName: '../packages',
+                libraryName: '../lib',
                 libraryDirectory: '',
                 // camel2DashComponentName: false,
             },
