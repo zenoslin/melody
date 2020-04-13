@@ -1,19 +1,39 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png" />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
-        <me-button></me-button>
+        <div class="me-title text-center">Melody</div>
+        <div class="me-desc text-center">轻量的移动端Vue组件库</div>
+        <div class="group">
+            <div class="me-desc">basics基础</div>
+            <a class="group-item" href="#/button">Button按钮</a>
+            <a class="group-item" href="#/layout">Layout布局</a>
+        </div>
     </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-
 export default {
     name: 'home',
-    components: {
-        HelloWorld,
-    },
+    components: {},
 };
 </script>
+
+<style lang="less" scoped>
+.home {
+    padding: 20px;
+}
+.group {
+    margin-top: 40px;
+    &-item {
+        width: 100%;
+        margin: 0 0 12px;
+        padding-left: 20px;
+        color: #323233;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 40px;
+        background: #f7f8fa;
+        box-sizing: border-box;
+        border-radius: 99px;
+    }
+}
+</style>

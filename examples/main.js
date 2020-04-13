@@ -1,8 +1,10 @@
+import 'normalize.css';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
-import Melody from '../lib/index.umd.min.js';
+import Melody from '../packages/index';
+import '../packages/style/index.less';
 
 Vue.use(Melody);
 
