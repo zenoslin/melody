@@ -1,6 +1,7 @@
-import Button from './button';
+import Button from './button/index.js';
+import Icon from './icon/index.js';
 
-const components = [Button];
+const components = [Button, Icon];
 
 const install = function(Vue) {
     if (install.installed) return;
