@@ -1,7 +1,9 @@
 import Button from './button/index.js';
 import Icon from './icon/index.js';
+import NavBar from './nav-bar/index.js';
+import "./style/index.less";
 
-const components = [Button, Icon];
+const components = [Button, Icon, NavBar];
 
 const install = function(Vue) {
     if (install.installed) return;

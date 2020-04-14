@@ -3,6 +3,9 @@ const path = require('path');
 const componentDir = './packages';
 const cModulueNames = fs.readdirSync(path.resolve(componentDir));
 const cModulueMap = cModulueNames.reduce((prev, name) => {
+    if (name === 'style') {
+        return prev;
+    }
     prev[name.split('.')[0]] = {
         input:
             name.indexOf('index') > -1
@@ -12,5 +15,6 @@ const cModulueMap = cModulueNames.reduce((prev, name) => {
     };
     return prev;
 }, {});
+
 
 module.exports = cModulueMap;
