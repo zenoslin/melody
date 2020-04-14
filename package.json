@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "clean": "rimraf ./node_modules",
     "lib": "cross-env NODE_ENV=production rimraf ./lib && node ./build/rollup.build"

@@ -4,7 +4,7 @@
         <div class="me-block">
             <div class="block-title">基础按钮</div>
             <div class="block-row">
-                <me-button type="default" @touchstart="onTouchstart">默认按钮</me-button>
+                <me-button type="default">默认按钮</me-button>
                 <me-button type="primary">主要按钮</me-button>
                 <me-button type="info">信息按钮</me-button>
             </div>
