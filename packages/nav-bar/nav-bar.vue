@@ -45,9 +45,9 @@ export default {
 .me-nav {
     position: relative;
     width: 100%;
-    height: 46px;
+    height: 44px;
     background-color: #fff;
-    border-bottom: 1px solid @1px-color;
+    border-bottom: 1px solid @border-color;
     .nav-content {
         max-width: 60%;
         margin: 0 auto;
@@ -57,7 +57,7 @@ export default {
         text-align: center;
     }
     .nav-right {
-        height: 46px;
+        height: 44px;
         position: absolute;
         top: 0;
         left: 0;
