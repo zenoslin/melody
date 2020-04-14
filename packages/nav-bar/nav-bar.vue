@@ -47,7 +47,7 @@ export default {
     width: 100%;
     height: 46px;
     background-color: #fff;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid @1px-color;
     .nav-content {
         max-width: 60%;
         margin: 0 auto;
