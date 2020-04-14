@@ -9,7 +9,8 @@
         "build": "vue-cli-service build",
         "test:unit": "vue-cli-service test:unit",
         "lint": "vue-cli-service lint",
-        "lib": "cross-env NODE_ENV=production rimraf ./lib && node ./build/rollup.build"
+        "lib": "cross-env NODE_ENV=production rimraf ./lib && node ./build/rollup.build",
+        "clean": "rimraf ./node_modules"
     },
     "dependencies": {},
     "peerDependencies": {
