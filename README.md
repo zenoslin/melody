@@ -1,4 +1,4 @@
-# melody
+# Melody
 
 轻量的 Vue 组件库
 
