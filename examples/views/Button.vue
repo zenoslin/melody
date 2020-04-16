@@ -48,7 +48,7 @@
         <div class="me-block">
             <div class="block-title">自定义颜色</div>
             <me-button color="#7232dd" type="primary">单色按钮</me-button>
-            <me-button color="#7232dd" type="primary">单色按钮</me-button>
+            <me-button plain color="#7232dd" type="primary">单色按钮</me-button>
             <me-button color="linear-gradient(to right, #4bb0ff, #6149f6)" type="primary">渐变按钮</me-button>
         </div>
     </div>
@@ -69,16 +69,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.block-title {
-    font-size: 14px;
-    line-height: 16px;
-    margin: 0;
-    padding: 12px 0;
-    color: @desc-color;
-}
-.block-row {
-    margin-bottom: 12px;
-}
 .me-button_normal:not(:last-child) {
     margin-right: 16px;
 }

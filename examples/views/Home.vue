@@ -4,8 +4,9 @@
         <div class="me-desc text-center">轻量的移动端Vue组件库</div>
         <div class="group">
             <div class="me-desc">basics基础</div>
-            <a class="group-item" href="#/button">Button按钮</a>
             <a class="group-item" href="#/layout">Layout布局</a>
+            <a class="group-item" href="#/button">Button按钮</a>
+            <a class="group-item" href="#/style">Style样式</a>
         </div>
     </div>
 </template>
@@ -17,7 +18,7 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .home {
     padding: 20px;
 }

@@ -72,9 +72,12 @@ export default {
         buttonStyle() {
             if (this.color === '') return '';
             if (this.plain) {
-                return `color: ${this.color}; border-color: ${this.color};`;
+                return `color:${this.color};border-color:${this.color};`;
             }
-            return `color: #fff; background: ${this.color}; border-color: ${this.color};`;
+            if (this.color.indexOf('linear-gradient') > -1) {
+                return `color: #fff;background:${this.color};border:0px;`;
+            }
+            return `color: #fff;background:${this.color};border-color:${this.color};`;
         },
     },
     methods: {
@@ -103,7 +106,6 @@ export default {
     text-align: center;
     border-radius: 6px;
     cursor: pointer;
-    -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
     -webkit-appearance: none;
     -webkit-text-size-adjust: 100%;

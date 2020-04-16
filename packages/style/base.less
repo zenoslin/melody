@@ -1,3 +1,6 @@
+@import './mixins/ellipsis.less';
+@import './mixins/hairline.less';
+
 html {
     -webkit-tap-highlight-color: transparent;
 }
@@ -18,15 +21,73 @@ input {
 .me-title {
     font-size: 32px;
     font-weight: 500;
+    line-height: 40px;
     color: #000;
     margin: 0 0 15px;
 }
 .me-desc {
     font-size: 14px;
+    line-height: 18px;
     color: @desc-color;
     margin: 0 0 15px;
 }
+
 .me-block {
     display: block;
     padding: 0 20px;
+}
+.me-ellipsis {
+    .ellipsis();
+}
+
+.me-multi-ellipsis--l2 {
+    .multi-ellipsis(2);
+}
+
+.me-multi-ellipsis--l3 {
+    .multi-ellipsis(3);
+}
+
+// 1px边框
+
+[class*='me-hairline'] {
+    &::after {
+        .hairline();
+    }
+}
+
+.me-hairline {
+    &,
+    &_top,
+    &_right,
+    &_bottom,
+    &_left,
+    &_surround,
+    &_top-bottom {
+        position: relative;
+    }
+
+    &_top::after {
+        border-top-width: @border-width-base;
+    }
+    &_right::after {
+        border-right-width: @border-width-base;
+    }
+    &_left::after {
+        border-left-width: @border-width-base;
+    }
+    &_bottom::after {
+        border-bottom-width: @border-width-base;
+    }
+
+    &,
+    &-unset {
+        &_top-bottom::after {
+            border-width: @border-width-base 0;
+        }
+    }
+
+    &_surround::after {
+        border-width: @border-width-base;
+    }
 }
