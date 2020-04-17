@@ -2,11 +2,12 @@ import Button from './button/index.js';
 import NavBar from './nav-bar/index.js';
 import Row from './row/index.js';
 import Col from './col/index.js';
+import Icon from './icon/index.js';
 
 // 引入全局样式
 import './style/index.less';
 
-const components = [Button, NavBar, Row, Col];
+const components = [Button, NavBar, Row, Col, Icon];
 
 const install = function(Vue) {
     if (install.installed) return;

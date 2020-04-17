@@ -19,6 +19,11 @@ export default new Router({
             component: () => import(/* webpackChunkName: "layout" */ './views/Layout.vue'),
         },
         {
+            path: '/icon',
+            name: 'icon',
+            component: () => import(/* webpackChunkName: "icon" */ './views/Icon.vue'),
+        },
+        {
             path: '/style',
             name: 'style',
             component: () => import(/* webpackChunkName: "style" */ './views/Style.vue'),

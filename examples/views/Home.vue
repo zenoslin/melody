@@ -6,6 +6,7 @@
             <div class="me-desc">basics基础</div>
             <a class="group-item" href="#/layout">Layout布局</a>
             <a class="group-item" href="#/button">Button按钮</a>
+            <a class="group-item" href="#/icon">Icon图标</a>
             <a class="group-item" href="#/style">Style样式</a>
         </div>
     </div>
