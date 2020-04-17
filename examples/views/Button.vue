@@ -10,7 +10,7 @@
             </div>
             <div class="block-row">
                 <me-button type="danger">危险按钮</me-button>
-                <me-button type="warning" >警告按钮</me-button>
+                <me-button type="warning">警告按钮</me-button>
             </div>
         </div>
         <div class="me-block">
@@ -57,14 +57,6 @@
 <script>
 export default {
     name: 'buttonPage',
-    methods: {
-        onClick(event) {
-            console.log(event);
-        },
-        onTouchstart(event) {
-            console.log(event);
-        },
-    },
 };
 </script>
 
