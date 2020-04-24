@@ -29,6 +29,11 @@ export default new Router({
             component: () => import(/* webpackChunkName: "style" */ './views/Style.vue'),
         },
         {
+            path: '/nav-bar',
+            name: 'navbar',
+            component: () => import(/* webpackChunkName: "navbar" */ './views/NavBar.vue'),
+        },
+        {
             path: '*',
             name: 'home',
             component: Home,
