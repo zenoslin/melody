@@ -34,6 +34,11 @@ export default new Router({
             component: () => import(/* webpackChunkName: "navbar" */ './views/NavBar.vue'),
         },
         {
+            path: '/toast',
+            name: 'toast',
+            component: () => import(/* webpackChunkName: "toast" */ './views/Toast.vue'),
+        },
+        {
             path: '*',
             name: 'home',
             component: Home,
