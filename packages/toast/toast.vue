@@ -1,5 +1,5 @@
 <template>
-    <transition name="me-fade">
+    <transition :name="transition">
         <div class="me-toast" :class="{'me-toast_cover': cover}" :style="toastStyle" v-if="visible">
             <div class="me-toast_loading" v-if="type === 'loading'">
                 <div class="me-toast_loading-spinner">
@@ -29,6 +29,7 @@ export default {
             onClose: null,
             cover: false, // 透明遮罩层
             coverColor: 'rgba(0, 0, 0, 0)',
+            d: 'me-fade',
         };
     },
     computed: {

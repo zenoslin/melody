@@ -16,6 +16,7 @@ const defaultOptions = {
     cover: false, // 透明遮罩层
     coverColor: 'rgba(0, 0, 0, 0)',
     loadingText: '加载中...',
+    transition: 'me-fade',
 };
 
 let currentOptions = {
