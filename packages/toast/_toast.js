@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import toastTemplate from './toast.vue';
 
-let ToastConstructor = Vue.extend(toastTemplate);
+const ToastConstructor = Vue.extend(toastTemplate);
 let instance;
 
 const defaultOptions = {
@@ -25,7 +25,7 @@ let currentOptions = {
 
 function _showToast(options) {
     if (!instance) {
-        instance = _creatInstance();
+        instance = _createInstance();
         instance.vm = instance.$mount();
         document.body.appendChild(instance.$el);
     }
@@ -44,7 +44,7 @@ function _hideToast() {
     return instance;
 }
 
-function _creatInstance() {
+function _createInstance() {
     let options = {
         ...currentOptions,
     };

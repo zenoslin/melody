@@ -4,9 +4,44 @@
     &-enter-active {
         animation: @animation-duration-base me-fade-in;
     }
-
     &-leave-active {
         animation: @animation-duration-base me-fade-out;
+    }
+}
+
+.me-slide-up {
+    &-enter-active {
+        animation: me-slide-up-enter @animation-duration-base both ease;
+    }
+    &-leave-active {
+        animation: me-slide-up-leave @animation-duration-base both ease;
+    }
+}
+
+.me-slide-down {
+    &-enter-active {
+        animation: me-slide-down-enter @animation-duration-base both ease;
+    }
+    &-leave-active {
+        animation: me-slide-down-leave @animation-duration-base both ease;
+    }
+}
+
+.me-slide-left {
+    &-enter-active {
+        animation: me-slide-left-enter @animation-duration-base both ease;
+    }
+    &-leave-active {
+        animation: me-slide-left-leave @animation-duration-base both ease;
+    }
+}
+
+.me-slide-right {
+    &-enter-active {
+        animation: me-slide-right-enter @animation-duration-base both ease;
+    }
+    &-leave-active {
+        animation: me-slide-right-leave @animation-duration-base both ease;
     }
 }
 
@@ -14,7 +49,6 @@
     &-enter-active {
         animation: me-slide-right-enter @animation-duration-base both ease;
     }
-
     &-leave-active {
         animation: me-fade-out @animation-duration-base both ease;
     }
@@ -24,7 +58,6 @@
     &-enter-active {
         animation: me-fade-in @animation-duration-base both ease;
     }
-
     &-leave-active {
         animation: me-slide-right-leave @animation-duration-base both ease;
     }
@@ -34,7 +67,6 @@
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -44,7 +76,6 @@
     from {
         opacity: 1;
     }
-
     to {
         opacity: 0;
     }
@@ -52,13 +83,36 @@
 
 @keyframes me-rotate {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
+@keyframes me-slide-up-enter {
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+@keyframes me-slide-up-leave {
+    to {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+@keyframes me-slide-down-enter {
+    from {
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+@keyframes me-slide-down-leave {
+    to {
+        transform: translate3d(0, -100%, 0);
+    }
+}
 
 @keyframes me-slide-right-enter {
     from {

@@ -29,7 +29,7 @@ export default {
             onClose: null,
             cover: false, // 透明遮罩层
             coverColor: 'rgba(0, 0, 0, 0)',
-            d: 'me-fade',
+            transition: 'me-fade',
         };
     },
     computed: {

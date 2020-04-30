@@ -5,14 +5,19 @@ import Row from './row/index.js';
 import Col from './col/index.js';
 import Icon from './icon/index.js';
 import Loading from './loading/index.js';
+import Overlay from './overlay/index.js';
 // 方法
 import Toast from './toast/index.js';
+import Dialog from './dialog/index.js';
 
 // 引入全局样式
 import './style/index.less';
 
-const components = [Button, NavBar, Row, Col, Icon, Loading];
-const methods = [{ name: 'toast', method: Toast }];
+const components = [Button, NavBar, Row, Col, Icon, Loading, Overlay];
+const methods = [
+    { name: 'toast', method: Toast },
+    { name: 'dialog', method: Dialog },
+];
 
 const install = function(Vue) {
     if (install.installed) return;

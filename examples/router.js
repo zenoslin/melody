@@ -39,6 +39,11 @@ export default new Router({
             component: () => import(/* webpackChunkName: "toast" */ './views/Toast.vue'),
         },
         {
+            path: '/dialog',
+            name: 'dialog',
+            component: () => import(/* webpackChunkName: "dialog" */ './views/Dialog.vue'),
+        },
+        {
             path: '*',
             name: 'home',
             component: Home,
