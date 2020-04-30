@@ -3,21 +3,19 @@ import toastTemplate from './toast.vue';
 
 let ToastConstructor = Vue.extend(toastTemplate);
 let instance;
-const defaultConfig = {
-    type: 'text',
-    loadingText: '加载中...',
-};
+
 const defaultOptions = {
     message: '',
     visible: false,
     duration: 2000, // 显示时间(ms)
     timer: null,
-    type: '',
+    type: 'text',
     bgColor: 'rgba(50, 50, 51, 0.88)',
     onOpen: null,
     onClose: null,
     cover: false, // 透明遮罩层
     coverColor: 'rgba(0, 0, 0, 0)',
+    loadingText: '加载中...',
 };
 
 let currentOptions = {
@@ -30,7 +28,7 @@ function _showToast(options) {
         instance.vm = instance.$mount();
         document.body.appendChild(instance.$el);
     }
-    Object.assign(instance.$data, options);
+    Object.assign(instance.$data, { ...currentOptions, ...options });
     Vue.nextTick(() => {
         instance.show();
     });
@@ -70,12 +68,19 @@ Toast.text = (message, options = {}) => {
     return _showToast({ type: 'text', message, ...options });
 };
 
-Toast.loading = (message = defaultConfig.loadingText, options = {}) => {
+Toast.loading = (message = currentOptions.loadingText, options = {}) => {
     errorMsg(message);
     return _showToast({ type: 'loading', cover: true, message, ...options });
 };
 Toast.clear = () => {
     return _hideToast();
+};
+Toast.setDefaultOptions = options => {
+    Object.assign(currentOptions, options);
+    console.log(currentOptions);
+};
+Toast.resetDefaultOptions = () => {
+    Object.assign(currentOptions, defaultOptions);
 };
 
 export default Toast;

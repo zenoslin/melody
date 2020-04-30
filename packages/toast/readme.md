@@ -2,12 +2,14 @@
 
 ## 方法
 
-| 方法名        | 说明         | 参数                                | 返回值    |
-| ------------- | ------------ | ----------------------------------- | --------- |
-| Toast         | 展示提示     | `message{string} | options{Object}` | toast实例 |
-| Toast.text    | 展示文字提示 | `message{string} | options{Object}` | toast实例 |
-| Toast.loading | 展示加载提示 | `message{string} | options{Object}` | toast实例 |
-| Toast.loading | 关闭提示     | -                                   | toast实例 |
+| 方法名                    | 说明         | 参数                               | 返回值    |
+| ------------------------- | ------------ | ---------------------------------- | --------- |
+| Toast                     | 展示提示     | `message{string}, options{Object}` | toast实例 |
+| Toast.text                | 展示文字提示 | `message{string}, options{Object}` | toast实例 |
+| Toast.loading             | 展示加载提示 | `message{string}, options{Object}` | toast实例 |
+| Toast.loading             | 关闭提示     | -                                  | toast实例 |
+| Toast.setDefaultOptions   | 修改默认选项 | `options{Object}`                  | `void`    |
+| Toast.resetDefaultOptions | 重置默认选项 | `options{Object}`                  | `void`    |
 
 ## Message
 

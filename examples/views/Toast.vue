@@ -26,9 +26,9 @@ export default {
         },
         handleLoading() {
             this.$toast.loading();
-            // setTimeout(() => {
-            //     this.$toast.clear();
-            // }, 2000);
+            setTimeout(() => {
+                this.$toast.clear();
+            }, 2000);
         },
     },
 };
