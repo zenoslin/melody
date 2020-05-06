@@ -29,8 +29,15 @@
 </template>
 
 <script>
+import Overlay from '../overlay/overlay.vue';
+import Button from '../button/button.vue';
+
 export default {
     name: 'me-dialog',
+    components: {
+        'me-overlay': Overlay,
+        'me-button': Button,
+    },
     data() {
         return {
             visible: false,
@@ -51,17 +58,29 @@ export default {
     methods: {
         show() {
             this.visible = true;
-            typeof this.onOpen === 'function' && this.onOpen();
+        },
+        hide() {
+            this.visible = false;
         },
         handleOverlay() {
-            if (closeOnClickOverlay) {
+            if (this.closeOnClickOverlay) {
                 this.visible = false;
             }
         },
         handleLeftBtn() {
-            typeof this.leftBtnFn === "function" && this.leftBtnFn();
+            if (!this.rightBtnFn) {
+                this.visible = false;
+                return;
+            }
+            typeof this.leftBtnFn === 'function' && this.leftBtnFn(this);
         },
-        handleRightBtn() {},
+        handleRightBtn() {
+            if (!this.rightBtnFn) {
+                this.visible = false;
+                return;
+            }
+            typeof this.leftBtnFn === 'function' && this.leftBtnFn(this);
+        },
     },
 };
 </script>

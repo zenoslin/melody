@@ -7,6 +7,11 @@
                 <me-button type="primary" @click="handleDialog">提示弹窗</me-button>
                 <me-button type="primary" @click="handleNoTitle">无标题提示弹窗</me-button>
             </div>
+            <div class="block-title">确认弹窗</div>
+            <div class="block-row">
+                <me-button type="primary" @click="handleConfirm">确认弹窗</me-button>
+                <me-button type="primary" @click="handleOverlay">点击背景取消</me-button>
+            </div>
         </div>
     </div>
 </template>
@@ -20,6 +25,12 @@ export default {
         },
         handleNoTitle() {
             this.$dialog.alert({ message: '弹窗内容' });
+        },
+        handleConfirm() {
+            this.$dialog.confirm({ title: '标题', message: '弹窗内容' });
+        },
+        handleOverlay() {
+            this.$dialog.confirm({ title: '标题', message: '弹窗内容', closeOnClickOverlay: true });
         },
     },
 };
