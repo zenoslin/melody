@@ -5,6 +5,11 @@ test('toast message', () => {
     expect(toast.message).toBe('提示内容');
 });
 
+test('loading toast message', () => {
+    const toast = Toast.loading('请求中...');
+    expect(toast.message).toBe('请求中...');
+})
+
 test('open toast', () => {
     const onOpenFn = jest.fn();
     Toast('提示内容', { onOpen: onOpenFn });

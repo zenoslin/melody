@@ -78,7 +78,6 @@ Toast.clear = () => {
 };
 Toast.setDefaultOptions = options => {
     Object.assign(currentOptions, options);
-    console.log(currentOptions);
 };
 Toast.resetDefaultOptions = () => {
     Object.assign(currentOptions, defaultOptions);

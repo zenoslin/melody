@@ -15,8 +15,11 @@
 </template>
 
 <script>
+import Loading from '../loading/loading.vue';
+
 export default {
     name: 'me-toast',
+    components: { 'me-loading': Loading },
     data() {
         return {
             message: '',
