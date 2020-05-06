@@ -10,7 +10,8 @@
             <a class="group-item" href="#/icon">Icon图标</a>
             <a class="group-item" href="#/nav-bar">NavBar导航栏</a>
             <a class="group-item" href="#/toast">Toast轻提示</a>
-            <a class="group-item" href="#/dialog">Dialog弹出框</a>
+            <a class="group-item" href="#/dialog">Dialog弹框</a>
+            <a class="group-item" href="#/popup">Popup弹出层</a>
         </div>
     </div>
 </template>
