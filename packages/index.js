@@ -7,6 +7,7 @@ import Icon from './icon/index.js';
 import Loading from './loading/index.js';
 import Overlay from './overlay/index.js';
 import Popup from './popup/index.js';
+import Sticky from './sticky/index.js';
 // 方法
 import Toast from './toast/index.js';
 import Dialog from './dialog/index.js';
@@ -14,7 +15,7 @@ import Dialog from './dialog/index.js';
 // 引入全局样式
 import './style/index.less';
 
-const components = [Button, NavBar, Row, Col, Icon, Loading, Overlay, Popup];
+const components = [Button, NavBar, Row, Col, Icon, Loading, Overlay, Popup, Sticky];
 const methods = [
     { name: 'toast', method: Toast },
     { name: 'dialog', method: Dialog },

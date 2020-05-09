@@ -12,6 +12,8 @@
             <a class="group-item" href="#/toast">Toast轻提示</a>
             <a class="group-item" href="#/dialog">Dialog弹框</a>
             <a class="group-item" href="#/popup">Popup弹出层</a>
+            <div class="me-desc">advance进阶</div>
+            <a class="group-item" href="#/Sticky">Sticky吸顶</a>
         </div>
     </div>
 </template>

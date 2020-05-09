@@ -49,6 +49,11 @@ export default new Router({
             component: () => import(/* webpackChunkName: "popup" */ './views/Popup.vue'),
         },
         {
+            path: '/sticky',
+            name: 'sticky',
+            component: () => import(/* webpackChunkName: "popup" */ './views/Sticky.vue'),
+        },
+        {
             path: '*',
             name: 'home',
             component: Home,
