@@ -1,0 +1,30 @@
+@import '../../../packages/style/variable.less';
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    min-width: 100vw;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei',
+        sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.me-block {
+    .block-title {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0;
+        padding: 12px 0;
+        color: @desc-color;
+    }
+    .block-row {
+        margin-bottom: 12px;
+    }
+}

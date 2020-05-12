@@ -3,9 +3,14 @@ const path = require('path');
 module.exports = {
     pages: {
         index: {
-            entry: 'examples/main.js',
-            template: 'public/index.html',
+            entry: 'examples/web/main.js',
+            template: 'examples/web/index.html',
             filename: 'index.html',
+        },
+        mobile: {
+            entry: 'examples/mobile/main.js',
+            template: 'examples/mobile/index.html',
+            filename: 'mobile/index.html',
         },
     },
 
