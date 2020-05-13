@@ -1,5 +1,5 @@
 <template>
-    <div class="menu-nav">
+    <div class="menu-nav" :style="`top:${top}px`">
         <div
             v-for="(item,index) in menuList"
             :key="`item-${index}`"
@@ -18,9 +18,19 @@ export default {
     data() {
         return {
             menuList: menuList,
+            top: 60,
         };
     },
-    methods: {},
+    mounted() {
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if (scrollTop > 60) {
+                this.top = 0;
+            } else {
+                this.top = 60 - scrollTop;
+            }
+        });
+    },
 };
 </script>
 

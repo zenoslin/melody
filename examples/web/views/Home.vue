@@ -3,6 +3,7 @@
         <header-nav />
         <simulator />
         <menu-nav />
+        <doc-content />
     </div>
 </template>
 
@@ -10,10 +11,11 @@
 import headerNav from '../components/header-nav';
 import simulator from '../components/simulator';
 import menuNav from '../components/menu-nav';
+import docContent from '../components/doc-content';
 
 export default {
     name: 'Home',
-    components: { headerNav, simulator, menuNav },
+    components: { headerNav, simulator, menuNav, docContent },
 };
 </script>
 
