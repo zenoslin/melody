@@ -24,6 +24,17 @@ pluginOptions: {
 }
 ```
 
+增加 `iframe-router` 插件同步web文档页面和ifarme示例页面路由同步
+
+```js
+// web/main.js & mobile.js
+import Vue from 'vue';
+import router from './router';
+import IframeRouter from '../common/iframe-router';
+
+Vue.use(IframeRouter, { vueRouter: router });
+```
+
 ## 单元测试
 
 - 无法渲染 `style` 中的渐变
