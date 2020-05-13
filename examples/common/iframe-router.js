@@ -24,7 +24,7 @@ function iframeReady(iframe, callback) {
 }
 
 export default {
-    install(Vue, { vueRouter }) {
+    install(Vue, { vueRouter, isFrame = false }) {
         window.syncPath = function() {
             const router = vueRouter;
             const isInIframe = window !== window.top;
@@ -48,5 +48,11 @@ export default {
                 vueRouter.replace(path).catch(() => {});
             }
         };
+
+        vueRouter.afterEach(() => {
+            if (!isFrame || !vueRouter.currentRoute.redirectedFrom) {
+                Vue.nextTick(window.syncPath);
+            }
+        });
     },
 };

@@ -11,7 +11,7 @@ import Melody from '../../packages/index.js';
 import './style/index.less';
 
 Vue.use(Melody);
-Vue.use(IframeRouter, { vueRouter: router });
+Vue.use(IframeRouter, { vueRouter: router, isFrame: true });
 
 Vue.config.productionTip = false;
 
