@@ -4,7 +4,7 @@ import App from './App.vue';
 import router from './router';
 import IframeRouter from '../common/iframe-router';
 
-// import '../lib/theme/index.css';
+// 加载组件库
 import Melody from '../../packages/index.js';
 
 // 加载全局样式

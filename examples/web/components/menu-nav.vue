@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { menuList } from '../config';
+import { menuList } from '../config/index.js';
 
 export default {
     name: 'menuNav',
@@ -44,6 +44,7 @@ export default {
     padding: 24px 0;
     background: #fff;
     overflow-y: auto;
+    box-shadow: 0 8px 12px #ebedf0;
     &_title {
         padding: 16px 0 16px 30px;
         a {

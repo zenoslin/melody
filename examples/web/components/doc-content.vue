@@ -1,18 +1,31 @@
 <template>
     <div class="doc-content">
-        <div class="doc-content_box markdown-body" v-html="doc"></div>
+        <div class="doc-content_box markdown-body" v-if="doc" v-html="doc"></div>
     </div>
 </template>
 
 <script>
-import dialogDoc from '../../../packages/dialog/readme.md';
+import { docList } from '../config/index.js';
 
 export default {
     name: 'docContent',
     data() {
         return {
-            doc: dialogDoc,
+            doc: '',
         };
+    },
+    computed: {
+        routePath() {
+            return this.$route.path;
+        },
+    },
+    watch: {
+        routePath(val) {
+            this.doc = docList[val];
+            this.$nextTick(() => {
+                window.hljs.loadHighlighting();
+            });
+        },
     },
 };
 </script>

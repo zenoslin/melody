@@ -46,7 +46,7 @@ export default {
 @media (max-width: 1300px) {
     .simulator {
         right: auto;
-        left: 950px;
+        left: 900px;
     }
 }
 </style>
