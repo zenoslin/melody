@@ -20,11 +20,14 @@ export default {
         },
     },
     watch: {
-        routePath(val) {
-            this.doc = docList[val];
-            this.$nextTick(() => {
-                window.hljs.loadHighlighting();
-            });
+        routePath: {
+            immediate: true,
+            handler(val) {
+                this.doc = docList[val];
+                this.$nextTick(() => {
+                    window.hljs.loadHighlighting();
+                });
+            },
         },
     },
 };
