@@ -8,7 +8,8 @@
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "clean": "rimraf ./node_modules",
-    "lib": "cross-env NODE_ENV=production rimraf ./lib && node ./build/rollup.build"
+    "lib": "cross-env NODE_ENV=production rimraf ./lib && node ./build/rollup.build",
+    "deploy": "vue-cli-service build && gh-pages -d dist"
   },
   "main": "lib/index.umd.min.js",
   "dependencies": {},
@@ -29,6 +30,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
+    "gh-pages": "^2.2.0",
     "html-loader": "^1.1.0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",

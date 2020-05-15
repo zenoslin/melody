@@ -14,7 +14,11 @@ $ yarn dev
 # 打包代码
 $ yarn build
 # 单元测试
-$ yarn test:unit
+$ yarn test
+# 打包组件库
+$ yarn lib
+# 发布主页
+$ yarn deploy
 ```
 
 ## 简介
