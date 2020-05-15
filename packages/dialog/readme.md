@@ -1,6 +1,41 @@
-# Dialog API
+## Dialog
 
-## 方法
+### 按需引入
+
+```js
+import Vue from 'vue';
+import { Dialog } from 'melody';
+
+Vue.use(Dialog);
+```
+
+### 示例
+
+#### 提示弹窗
+
+```js
+this.$dialog.alert({ title: '标题', message: '弹窗内容' });
+```
+
+#### 无标题提示弹窗
+
+```js
+this.$dialog.alert({ message: '弹窗内容' });
+```
+
+#### 确认弹窗
+
+```js
+this.$dialog.confirm({ title: '标题', message: '弹窗内容' });
+```
+
+#### 点击背景取消
+
+```js
+this.$dialog.confirm({ title: '标题', message: '弹窗内容', closeOnClickOverlay: true });
+```
+
+### 方法
 
 | 方法名                     | 说明         | 参数              | 返回值       |
 | -------------------------- | ------------ | ----------------- | ------------ |
@@ -11,7 +46,7 @@
 | Dialog.setDefaultOptions   | 修改默认选项 | `options{Object}` | `void`       |
 | Dialog.resetDefaultOptions | 重置默认选项 | `options{Object}` | `void`       |
 
-## Options
+### Options
 
 | 参数                | 说明                                                         | 类型       | 默认值                    |
 | ------------------- | ------------------------------------------------------------ | ---------- | ------------------------- |
@@ -27,7 +62,7 @@
 | overlayColor        | 遮罩层的颜色                                                 | `string`   | `'rgba(0, 0, 0, 0.7)'`    |
 | closeOnClickOverlay | 点击遮罩层时是否关闭弹窗                                     | `boolean`  | `false`                   |
 
-## dialog实例
+### dialog实例
 
 | 方法名 | 说明     | 参数 | 默认值 |
 | ------ | -------- | ---- | ------ |

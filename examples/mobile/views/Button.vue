@@ -43,7 +43,7 @@
         </div>
         <div class="me-block">
             <div class="block-title">块级元素</div>
-            <me-button type="primary" block>大号按钮</me-button>
+            <me-button type="primary" block>块级按钮</me-button>
         </div>
         <div class="me-block">
             <div class="block-title">自定义颜色</div>

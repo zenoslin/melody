@@ -36,6 +36,7 @@ export default {
     border-radius: 12px;
     box-shadow: #ebedf0 0 4px 12px;
     overflow: hidden;
+    background: #fff;
     iframe {
         width: 100%;
         height: 667px;

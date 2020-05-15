@@ -5,7 +5,12 @@
             :key="`item-${index}`"
             :class="{'menu-nav_title': item.type === 'title','menu-nav_item': item.type === 'item'}"
         >
-            <a :href="item.path">{{item.name}}</a>
+            <span
+                v-if="item.type === 'item'"
+                :class="{'menu-nav_item-active':item.path === routePath}"
+                @click="handleLink(item.path)"
+            >{{item.name}}</span>
+            <span v-else>{{item.name}}</span>
         </div>
     </div>
 </template>
@@ -20,6 +25,17 @@ export default {
             menuList: menuList,
             top: 60,
         };
+    },
+    computed: {
+        routePath() {
+            return this.$route.path;
+        },
+    },
+    methods: {
+        handleLink(path) {
+            if (this.routePath === path) return;
+            this.$router.push(path);
+        },
     },
     mounted() {
         window.addEventListener('scroll', () => {
@@ -47,16 +63,20 @@ export default {
     box-shadow: 0 8px 12px #ebedf0;
     &_title {
         padding: 16px 0 16px 30px;
-        a {
+        color: #a18cd1;
+        span {
             font-size: 14px;
-            color: #a18cd1;
         }
     }
     &_item {
         padding: 12px 0 12px 30px;
-        a {
+        color: #323233;
+        span {
             font-size: 16px;
-            color: #323233;
+            cursor: pointer;
+        }
+        &-active {
+            color: #ff9a9e;
         }
     }
 }
