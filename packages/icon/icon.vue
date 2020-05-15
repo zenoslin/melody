@@ -48,6 +48,8 @@ export default {
 </script>
 
 <style lang="less">
+@import '../style/variable.less';
+
 .me-icon {
     position: relative;
     display: inline-block;
@@ -70,7 +72,6 @@ export default {
         line-height: 14px;
         text-align: center;
         background-color: @red;
-        // border: 1px solid #fff;
         border-radius: 16px;
     }
     &_badge-dot {
