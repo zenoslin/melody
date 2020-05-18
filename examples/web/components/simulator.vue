@@ -1,6 +1,6 @@
 <template>
     <div class="simulator" :style="`top:${top}px`" >
-        <iframe src="/mobile/index.html" frameborder="0" id="frame_full" scrolling="auto"></iframe>
+        <iframe :src="`${baseUrl}mobile/index.html`" frameborder="0" id="frame_full" scrolling="auto"></iframe>
     </div>
 </template>
 
@@ -10,6 +10,7 @@ export default {
     data() {
         return {
             top: 100,
+            baseUrl: process.env.BASE_URL
         };
     },
     mounted() {
@@ -20,7 +21,7 @@ export default {
             } else {
                 this.top = 100 - scrollTop;
             }
-        });
+        });        
     },
 };
 </script>
