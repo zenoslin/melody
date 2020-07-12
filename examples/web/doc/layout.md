@@ -70,3 +70,21 @@ Vue.use(Row);
     <me-col span="6">span: 6</me-col>
 </me-row>
 ```
+
+### Options
+
+#### row
+
+| 参数    | 说明                                                         | 类型            | 默认值    |
+| ------- | ------------------------------------------------------------ | --------------- | --------- |
+| gutter  | 元素之间的间隔（px）                                         | `string,number` | `0`       |
+| type    | 布局方式，可选：`flex`                                       | `string`        | `default` |
+| justify | Flex布局的对齐方式：`center` `end` `space-around` `space-between` | `string`        | `''`      |
+
+#### col
+
+| 参数   | 说明         | 类型            | 默认值 |
+| ------ | ------------ | --------------- | ------ |
+| span   | 元素宽度     | `string,number` | `''`   |
+| offset | 元素偏移距离 | `string,number` | `''`   |
+

@@ -35,7 +35,7 @@ this.$dialog.confirm({ title: '标题', message: '弹窗内容' });
 this.$dialog.confirm({ title: '标题', message: '弹窗内容', closeOnClickOverlay: true });
 ```
 
-### 方法
+### Methods
 
 | 方法名                     | 说明         | 参数              | 返回值       |
 | -------------------------- | ------------ | ----------------- | ------------ |
